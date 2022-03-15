@@ -1,0 +1,42 @@
+@charset "utf-8"
+
+// $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px )
+
+$sm:    576px
+$md:    768px
+$lg:    992px
+$xl:    1200px
+$xxl: 1400px
+
+=desktop-ie
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    @content
+=desktop-edge
+  @supports (-ms-ime-align: auto)
+    @content
+
+=sm-down
+  @media screen and ( max-width: $sm )
+    @content
+=md-down
+  @media screen and ( max-width: $md )
+    @content
+=xl-down
+  @media screen and ( max-width: $xl )
+    @content
+=xxl-down
+  @media screen and ( max-width: $xxl )
+    @content
+
+=sm-up
+  @media screen and ( min-width: $sm )
+    @content
+=md-up
+  @media screen and ( min-width: $md )
+    @content
+=xl-up
+  @media screen and ( min-width: $xl )
+    @content
+=xxl-up
+  @media screen and ( min-width: $xxl )
+    @content

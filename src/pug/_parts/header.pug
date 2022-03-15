@@ -1,0 +1,64 @@
+header.header-container
+    nav.navbar.navbar-expand-lg.navbar-white.bg-transparent
+        .container-xxl.align-items-sm-start
+            a.navbar-brand(href=path+'/')
+                span.logo.d-inline-block
+                    img(src="./img/karo.png" alt="logo" height="130")
+            
+            .clearfix.d-block.d-sm-none
+                span.nav-tel.d-flex.align-items-center
+                    span.ico
+                        img(src="./img/icon/tel.png")
+                    span.number.ps-2 19003389
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarmenu' aria-controls='navbarmenu' aria-expanded='false' aria-label='Toggle navigation')
+                span
+                    img(src="./img/bars.png" alt="icon")
+            #navbarmenu.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item
+                        a.nav-link.trans(href="#") trang chủ
+                    li.nav-item
+                        a.nav-link.trans(href="#") liên hệ
+                    li.nav-item
+                        .dropdown
+                            a.nav-link.trans#shopOnline(data-bs-toggle='dropdown' aria-expanded='false')
+                                | mua hàng trực tuyến
+                                span.ico 
+                                    img(src="./img/icon/arrow-down.png" alt="icon")
+                            ul.dropdown-menu.dropdown-menu-end(aria-labelledby='shopOnline')
+                                li.py-1
+                                    a.dropdown-item(href='#')
+                                        span.d-flex.align-items-center
+                                            span.ico
+                                                img(src="./img/icon/zalo.png" alt="Zalo")
+                                            span.text.ps-2 Zalo
+                                li.py-1
+                                    a.dropdown-item(href='#')
+                                        span.d-flex.align-items-center
+                                            span.ico
+                                                img(src="./img/icon/shopee.png" alt="Shopee")
+                                            span.text.ps-2 Shopee
+                                li.py-1
+                                    a.dropdown-item(href='#')
+                                        span.d-flex.align-items-center
+                                            span.ico
+                                                img(src="./img/icon/lazada.png" alt="Lazada")
+                                            span.text.ps-2 Lazada
+                                li.py-1
+                                    a.dropdown-item(href='#')
+                                        span.d-flex.align-items-center
+                                            span.ico
+                                                img(src="./img/icon/richy.png" alt="Ricky")
+                                            span.text.ps-2 Ricky
+
+                    li.nav-item.d-none.d-sm-block
+                        span.nav-link
+                            span.nav-tel.d-flex.align-items-center
+                                span.ico
+                                    img(src="./img/icon/tel.png")
+                                span.number.ps-2 19003389
+            
+            .clearfix.d-none.d-sm-block
+                p.mb-0
+                    img(src="./img/richy_20.png" alt="richy 20" width="138")
+    

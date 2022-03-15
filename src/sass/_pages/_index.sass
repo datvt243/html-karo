@@ -1,0 +1,55 @@
+@charset "utf-8"
+
+.keyvisual
+  overflow: hidden
+  height: 100vh
+  padding:
+    top: 10rem
+    bottom: 40px
+
+  .content
+    position: relative
+    z-index: 10
+    &:after
+      content: ''
+      position: absolute
+      z-index: -1
+      bottom: 0
+      left: -50%
+      height: 0
+      width: 99vw
+      transform: translateY(50%)
+      padding-bottom: 15%
+      background: 
+        image: url(../img/deco_03.png)
+        repeat: no-repeat
+        position: top center
+    .deco01, .deco02
+      position: absolute
+      z-index: 10
+      margin: 0
+      padding: 0
+    .deco01
+      bottom: 50px
+      left: 0
+      transform: translateX(-70%)
+    .deco02
+      bottom: -30px
+      right: 0
+      transform: translateX(70%)
+
+  .footer
+    position: absolute
+    z-index: 10
+    bottom: 0
+    left: 0
+    width: 100%
+    color: #fff
+    background: #8E0B0E
+    padding: 8px 0
+
+.chatbot
+  position: fixed
+  bottom: 15px
+  right: 15px
+  z-index: 999

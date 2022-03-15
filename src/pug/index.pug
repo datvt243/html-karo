@@ -1,0 +1,40 @@
+extends _layouts/default
+
+block vars
+    -title        = 'Karo | Trứng tươi - chà bông'
+    -description  = ''
+    -keywords     = ''
+    -pageID       = 'top'
+    -path         = '.'
+block container
+    
+    .keyvisual
+        .container.d-flex.flex-column.justify-content-center.align-items-center.h-100
+            p.text-center
+                img(src="./img/trung_xe_o_to.png" alt="Trúng xe ô tô" width="757")
+            p.text-center
+                a.d-inline-block.trans(href="#") 
+                    img(src="./img/tham_gia_quay_thuong.png" alt="Tham gia quay thưởng" width="320")
+            .clearfix
+                .content
+                    p.deco01
+                        img(src="./img/tren_10_ty_dong.png" alt="Trên 10 tỷ đồng" width="273")
+                    p.deco02
+                        img(src="./img/deco_02.png" alt="Trên 10 tỷ đồng" width="380")
+                    p.text-center
+                        img(src="./img/oto_02.png" alt="Trúng xe ô tô" width="757")
+        .footer.d-none.d-sm-block
+            .container
+                .row.align-items-center.justify-content-between
+                    .col-auto
+                        p.mb-0 Thời gian áp dụng từ 25/3/2022 - 25/5/2022 trên toàn quốc    
+                    .col-auto    
+                        p.mb-0 HOTLINE 19003389
+    
+    .chatbot
+        p.mb-0
+            a.d-inline-block.trans(href="#")
+                img(src="./img/chat.png" alt="Chat")
+
+block script
+        

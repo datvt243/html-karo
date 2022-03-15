@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+/** Bootstrap custom - v5 */
+
+// @import "./bootstrap/bootstrap";
+
+// Configuration
+@import "./bootstrap/functions";
+
+// Reboot
+// -----------------------------
+$font-family-sans-serif:
+ 'Nunito',
+  // Cross-platform generic font family (default user interface font)
+  system-ui,
+  // Safari for macOS and iOS (San Francisco)
+  -apple-system,
+  // Windows
+  "Segoe UI",
+  // Android
+  // Roboto,
+  // Basic web fallback
+  "Helvetica Neue", Arial,
+  // Linux
+  "Noto Sans",
+  "Liberation Sans",
+  // Sans serif fallback
+  sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$body-color: #202124;
+
+// Custom Color
+$primary: #1967d2;
+$dark: #202124;
+// -------------
+$blue: #1967d2;
+$red: #e33030;
+$orange: #e8630b;
+
+// Custom Navbar
+$navbar-padding-y: 0;
+$navbar-nav-link-padding-x: 1.5rem;
+
+$nav-tabs-border-color: #b1b1b1;
+$nav-tabs-border-radius: 6px;
+$nav-tabs-link-hover-border-color:  $blue $blue $blue;
+$nav-tabs-link-active-color: #fff;
+$nav-tabs-link-active-bg: $blue;;
+$nav-tabs-link-active-border-color: $blue;
+
+// Dropdown
+$dropdown-min-width:                10rem;
+$dropdown-border-radius:            10px;
+$navbar-dark-color: #A00101;
+
+@import "./bootstrap/variables";
+@import "./bootstrap/mixins";
+@import "./bootstrap/utilities";
+
+// Layout & components
+@import "./bootstrap/root";
+@import "./bootstrap/reboot";
+@import "./bootstrap/type";
+@import "./bootstrap/images";
+@import "./bootstrap/containers";
+@import "./bootstrap/grid";
+// @import "./bootstrap/tables";
+@import "./bootstrap/forms";
+@import "./bootstrap/buttons";
+@import "./bootstrap/transitions";
+@import "./bootstrap/dropdown";
+// @import "./bootstrap/button-group";
+@import "./bootstrap/nav";
+@import "./bootstrap/navbar";
+// @import "./bootstrap/card";
+// @import "./bootstrap/accordion";
+// @import "./bootstrap/breadcrumb";
+// @import "./bootstrap/pagination";
+// @import "./bootstrap/badge";
+// @import "./bootstrap/alert";
+// @import "./bootstrap/progress";
+// @import "./bootstrap/list-group";
+// @import "./bootstrap/close";
+// @import "./bootstrap/toasts";
+// @import "./bootstrap/modal";
+// @import "./bootstrap/tooltip";
+// @import "./bootstrap/popover";
+// @import "./bootstrap/carousel";
+// @import "./bootstrap/spinners";
+// @import "./bootstrap/offcanvas";
+// @import "./bootstrap/placeholders";
+
+// Helpers
+@import "./bootstrap/helpers";
+
+// Utilities
+@import "./bootstrap/utilities/api";
+// scss-docs-end import-stack
+
+.text {
+    &-red {
+        color: $red;
+    }
+    &-orange {
+        color: $orange;
+    }
+    &-gray {
+        color: #636363;
+    }
+    &-bold {
+        font-weight: 700;
+    }
+}
+
+$custom_height: 1, 2, 3;
+.h {
+    @each $h in $custom_height {
+        &-#{$h} {
+            height: #{$h}rem;
+        }
+    }
+}
+    
+.navbar {
+
+    &-toggler {
+        color: #fff;
+        transition: color .3s ease, background-color .3s ease;
+    }
+
+    &-nav {
+        .dropdown-item {
+            font-weight: 800
+        }
+
+        .dropdown-menu {
+            transform: translateX(-1.5rem);
+        }
+
+        @include media-breakpoint-down(lg) {
+            background-color: rgb(239, 246, 255);
+            border-radius: 6px;
+            padding: 0 1rem;
+            margin: 0.5rem 0 1rem;
+        }
+    }
+    
+    &-brand {
+        @include media-breakpoint-down(md) {
+            .logo {
+                img { max-height: 40px; }
+            }
+        }
+    }
+
+    &-nav {
+        align-items: center;
+        .nav-link {
+            text-transform: uppercase;
+            font-weight: 800;
+            color: #fff;
+            padding: {
+                top: .5rem;
+                bottom: .5rem;
+            };
+            position: relative;
+            
+            > .ico {
+                display: inline-block;
+                line-height: 0;
+                margin-left: 5px;
+                position: relative;
+                top: -2px;
+            }
+
+            &.active, &:hover {
+                
+                &:after {
+                    opacity: 1;
+                    bottom: 0;
+                }
+            }
+            @include media-breakpoint-down(sm) {
+                text-align: center;
+                padding: {
+                    top: .6rem;
+                    bottom: .6rem;
+                };
+                &:after {
+                    height: 2px;
+                }
+            }
+        }
+        
+    }
+
+    
+
+}
+.nav {
+    
+    &-tabs {
+        justify-content: center;
+        border: 0;
+        .nav-item {
+            padding: {
+                left: .5rem;
+                right: .5rem;
+            };
+        }
+        .nav-link {
+            color: $nav-tabs-border-color;
+            border: {
+                color: $nav-tabs-border-color;
+                bottom-left-radius: $nav-tabs-border-radius;
+                bottom-right-radius: $nav-tabs-border-radius;
+            }
+            font: {
+                weight: 500;
+            };
+            transition: all .3s ease;
+            &:hover {
+                color: $nav-tabs-link-active-bg;
+            }
+            &.active {
+                color: #fff;
+            }
+            
+        }
+        @include media-breakpoint-up(lg) {
+            .nav-item {
+                padding: {
+                    left: 1rem;
+                    right: 1rem;
+                };
+            }
+            .nav-link {
+                font-size: 1.5rem;
+                padding: {
+                    left: 2rem;
+                    right: 2rem;
+                };
+            }
+        }
+    }
+
+    
+}
+
+.btn {
+    &-facebook, &-linkedin {
+        color: #fff;
+        transition: opacity .3s ease;
+        &:hover {
+            color: #fff;
+            opacity: .7;
+        }
+    }
+    &-facebook {
+        
+        background-color: #1877f2;
+    }
+    &-linkedin {
+        background-color: #0a66c2;
+    }
+}
