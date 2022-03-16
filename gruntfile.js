@@ -316,6 +316,18 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-cwebp');
 
+    grunt.registerTask('build', [
+        'clean',
+        'pug',
+        'sass',
+        'copy:js',
+        'copy:svg',
+        'copy:fonts',
+        'prettier',
+        'imagemin',
+        'lint',
+    ]);
+
     grunt.registerTask('default', [
         'clean',
         'pug',

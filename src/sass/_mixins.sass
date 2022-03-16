@@ -6,7 +6,7 @@ $sm:    576px
 $md:    768px
 $lg:    992px
 $xl:    1200px
-$xxl: 1400px
+$xxl:   1400px
 
 =desktop-ie
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
@@ -21,6 +21,9 @@ $xxl: 1400px
 =md-down
   @media screen and ( max-width: $md )
     @content
+=lg-down
+  @media screen and ( max-width: $lg )
+    @content
 =xl-down
   @media screen and ( max-width: $xl )
     @content
@@ -33,6 +36,9 @@ $xxl: 1400px
     @content
 =md-up
   @media screen and ( min-width: $md )
+    @content
+=lg-up
+  @media screen and ( min-width: $lg )
     @content
 =xl-up
   @media screen and ( min-width: $xl )

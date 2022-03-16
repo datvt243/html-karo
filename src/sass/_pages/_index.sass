@@ -4,26 +4,14 @@
   overflow: hidden
   height: 100vh
   padding:
-    top: 10rem
+    top: 8rem
     bottom: 40px
+  +md-down
+    height: auto
 
   .content
     position: relative
     z-index: 10
-    &:after
-      content: ''
-      position: absolute
-      z-index: -1
-      bottom: 0
-      left: -50%
-      height: 0
-      width: 99vw
-      transform: translateY(50%)
-      padding-bottom: 15%
-      background: 
-        image: url(../img/deco_03.png)
-        repeat: no-repeat
-        position: top center
     .deco01, .deco02
       position: absolute
       z-index: 10
@@ -37,19 +25,135 @@
       bottom: -30px
       right: 0
       transform: translateX(70%)
+    +xl-down
+      .deco01
+        left: 100px
+      .deco02
+        right: 100px
+    +md-down
+      position: relative
+      .deco01, .deco02
+        position: static
+        transform: inherit
 
   .footer
-    position: absolute
-    z-index: 10
-    bottom: 0
-    left: 0
     width: 100%
     color: #fff
     background: #8E0B0E
     padding: 8px 0
 
+    +md-up
+      position: absolute
+      z-index: 10
+      bottom: 0
+      left: 0
+    +md-down
+      position: relative
+      z-index: 10
+
+  +lg-down
+    padding:
+      top: 8rem
+      bottom: 0
+  
+.vong-quay
+  overflow: hidden
+  padding:
+    top: 4rem
+    bottom: 4rem
+  +lg-up
+    height: 100vh
+  +lg-down
+    padding-top: 14rem
+  .content
+    +lg-up
+      width: 570px
+      transform: translateX(25%)
+    +lg-down
+      max-width: 420px
+      width: auto
+      
+.quay-thuong
+  position: relative
+  &:before
+    content: ''
+    width: 82px
+    height: 94px
+    position: absolute
+    z-index: 10
+    top: 0
+    left: 50%
+    transform: translate(-50%, -25%)
+    background: 
+      image: url(../img/arrow.png)
+      repeat: no-repeat
+      size: cover
+
+  +lg-up
+    position: absolute
+    z-index: 10
+    top: 50%
+    left: 0
+    transform: translate(-50%, -50%)
+
+  +lg-down
+    margin-top: calc(-50% - 1.5rem)
+    margin-left: -2rem
+    margin-right: -2rem
+    &:before
+      width: 62px
+      height: 64px
+    
 .chatbot
   position: fixed
   bottom: 15px
   right: 15px
   z-index: 999
+
+.card-content
+  position: relative
+  z-index: 10
+  margin: 0
+  padding: 0
+  text-align: center
+  &:after
+    content: ''
+    position: absolute
+    z-index: -1
+    top: calc(100% - 15%)
+    left: 50%
+    height: 100%
+    width: 200%
+    transform: translateX(-50%)
+    background: 
+      image: url(../img/deco_03.png)
+      repeat: no-repeat
+      position: top center
+      size: 100% 100%
+  +md-down
+    &:after
+      height: 130%
+
+.form-primary
+
+  .title
+    font:
+      size: 16px
+      weight: 700
+    color: #821F1F
+    letter-spacing: .025em
+    text-align: center
+
+  .form-label
+    font:
+      size: 13px
+      weight: 700
+    color: #5C5C5C
+    margin-bottom: 0
+    padding-left: 5px
+
+  .form-control, .form-select
+    height: 28px
+    padding: 0.175rem 0.75rem
+    font-size: 13px
+    border-radius: 6px

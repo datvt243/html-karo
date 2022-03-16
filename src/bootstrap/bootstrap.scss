@@ -40,7 +40,7 @@ $orange: #e8630b;
 
 // Custom Navbar
 $navbar-padding-y: 0;
-$navbar-nav-link-padding-x: 1.5rem;
+$navbar-nav-link-padding-x: 1.25rem;
 
 $nav-tabs-border-color: #b1b1b1;
 $nav-tabs-border-radius: 6px;
@@ -139,10 +139,31 @@ $custom_height: 1, 2, 3;
         }
 
         @include media-breakpoint-down(lg) {
-            background-color: rgb(239, 246, 255);
+            background-color: #A00101;
             border-radius: 6px;
             padding: 0 1rem;
             margin: 0.5rem 0 1rem;
+
+            .nav-link {
+                display: block;
+                padding: {
+                    top: 1rem;
+                    bottom: 1rem;
+                };
+            }
+
+        }
+
+        @include media-breakpoint-down(md) {
+            
+            .nav-link {
+                display: block;
+                padding: {
+                    top: .8rem;
+                    bottom: .8rem;
+                };
+            }
+
         }
     }
     
@@ -192,7 +213,9 @@ $custom_height: 1, 2, 3;
                 }
             }
         }
-        
+        @include media-breakpoint-down(lg) {
+            font-size: 14px;
+        }
     }
 
     

@@ -15,6 +15,15 @@
   color: #fff;
   padding: 3rem 0;
 }
+@media screen and (max-width: 992px) {
+  .header-container {
+    padding: 1.5rem 0;
+  }
+  .header-container .logo img {
+    height: 110px;
+    max-height: 110px;
+  }
+}
 @media screen and (max-width: 576px) {
   .header-container {
     padding-top: 0.5rem;
@@ -91,6 +100,7 @@
 body {
   background-image: url(../img/Background.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 .body-container {
@@ -102,29 +112,28 @@ body {
   flex-grow: 1;
 }
 
+.max-w-100 {
+  max-width: 100%;
+}
+
+.z-index-10 {
+  z-index: 10;
+}
+
 .keyvisual {
   overflow: hidden;
   height: 100vh;
-  padding-top: 10rem;
+  padding-top: 8rem;
   padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .keyvisual {
+    height: auto;
+  }
 }
 .keyvisual .content {
   position: relative;
   z-index: 10;
-}
-.keyvisual .content:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  left: -50%;
-  height: 0;
-  width: 99vw;
-  transform: translateY(50%);
-  padding-bottom: 15%;
-  background-image: url(../img/deco_03.png);
-  background-repeat: no-repeat;
-  background-position: top center;
 }
 .keyvisual .content .deco01, .keyvisual .content .deco02 {
   position: absolute;
@@ -142,15 +151,113 @@ body {
   right: 0;
   transform: translateX(70%);
 }
+@media screen and (max-width: 1200px) {
+  .keyvisual .content .deco01 {
+    left: 100px;
+  }
+  .keyvisual .content .deco02 {
+    right: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .keyvisual .content {
+    position: relative;
+  }
+  .keyvisual .content .deco01, .keyvisual .content .deco02 {
+    position: static;
+    transform: inherit;
+  }
+}
 .keyvisual .footer {
-  position: absolute;
-  z-index: 10;
-  bottom: 0;
-  left: 0;
   width: 100%;
   color: #fff;
   background: #8E0B0E;
   padding: 8px 0;
+}
+@media screen and (min-width: 768px) {
+  .keyvisual .footer {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .keyvisual .footer {
+    position: relative;
+    z-index: 10;
+  }
+}
+@media screen and (max-width: 992px) {
+  .keyvisual {
+    padding-top: 8rem;
+    padding-bottom: 0;
+  }
+}
+
+.vong-quay {
+  overflow: hidden;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+@media screen and (min-width: 992px) {
+  .vong-quay {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 992px) {
+  .vong-quay {
+    padding-top: 14rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .vong-quay .content {
+    width: 570px;
+    transform: translateX(25%);
+  }
+}
+@media screen and (max-width: 992px) {
+  .vong-quay .content {
+    max-width: 420px;
+    width: auto;
+  }
+}
+
+.quay-thuong {
+  position: relative;
+}
+.quay-thuong:before {
+  content: "";
+  width: 82px;
+  height: 94px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  background-image: url(../img/arrow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 992px) {
+  .quay-thuong {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 992px) {
+  .quay-thuong {
+    margin-top: calc(-50% - 1.5rem);
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  .quay-thuong:before {
+    width: 62px;
+    height: 64px;
+  }
 }
 
 .chatbot {
@@ -158,6 +265,54 @@ body {
   bottom: 15px;
   right: 15px;
   z-index: 999;
+}
+
+.card-content {
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.card-content:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 85%;
+  left: 50%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(-50%);
+  background-image: url(../img/deco_03.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+}
+@media screen and (max-width: 768px) {
+  .card-content:after {
+    height: 130%;
+  }
+}
+
+.form-primary .title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #821F1F;
+  letter-spacing: 0.025em;
+  text-align: center;
+}
+.form-primary .form-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #5C5C5C;
+  margin-bottom: 0;
+  padding-left: 5px;
+}
+.form-primary .form-control, .form-primary .form-select {
+  height: 28px;
+  padding: 0.175rem 0.75rem;
+  font-size: 13px;
+  border-radius: 6px;
 }
 
 /*# sourceMappingURL=styles.css.map */

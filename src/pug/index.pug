@@ -11,18 +11,22 @@ block container
     .keyvisual
         .container.d-flex.flex-column.justify-content-center.align-items-center.h-100
             p.text-center
-                img(src="./img/trung_xe_o_to.png" alt="Trúng xe ô tô" width="757")
+                img(class="max-w-100" src="./img/trung_xe_o_to.png" alt="Trúng xe ô tô" width="757")
             p.text-center
                 a.d-inline-block.trans(href="#") 
-                    img(src="./img/tham_gia_quay_thuong.png" alt="Tham gia quay thưởng" width="320")
+                    img(class="tham_gia_quay_thuong max-w-100" src="./img/tham_gia_quay_thuong.png" alt="Tham gia quay thưởng" width="320")
             .clearfix
                 .content
-                    p.deco01
-                        img(src="./img/tren_10_ty_dong.png" alt="Trên 10 tỷ đồng" width="273")
-                    p.deco02
-                        img(src="./img/deco_02.png" alt="Trên 10 tỷ đồng" width="380")
-                    p.text-center
-                        img(src="./img/oto_02.png" alt="Trúng xe ô tô" width="757")
+                    p.card-content
+                        img(class="max-w-100" src="./img/oto_02.png" alt="Trúng xe ô tô" width="757")
+                    .row.align-items-center.position-relative.z-index-10.pb-3
+                        .col
+                            p.deco01
+                                img(class="tren_10_ty_dong max-w-100" src="./img/tren_10_ty_dong.png" alt="Trên 10 tỷ đồng" width="273")
+                        .col
+                            p.deco02
+                                img(class="max-w-100" src="./img/deco_02.png" alt="Trên 10 tỷ đồng" width="380")
+                    
         .footer.d-none.d-sm-block
             .container
                 .row.align-items-center.justify-content-between
@@ -31,6 +35,51 @@ block container
                     .col-auto    
                         p.mb-0 HOTLINE 19003389
     
+    .section.vong-quay
+        .container.d-flex.flex-column.justify-content-center.align-items-center.h-100
+            .content.bg-white.rounded.p-4.position-relative
+                .row
+                    .col-12.col-lg-6.my-2
+                        .clearfix
+                            .quay-thuong
+                                p.m-0
+                                    img(class="max-w-100" src="./img/vong_xoay.png", alt="quay thưởng" width="560")
+                    .col-12.col-lg-6.my-2
+                        .form-primary
+                            p.title.mb-2 Vui lòng điền đầy đủ thông tin để được tham gia quay thưởng
+                            form
+                                .mb-2
+                                    label.form-label(for='code') Mã dự thưởng trên thẻ cào
+                                    input#code.form-control(type='text')
+                                .mb-2
+                                    label.form-label(for='fullname') Họ và tên
+                                    input#fullname.form-control(type='text')
+                                .mb-2
+                                    label.form-label(for='phone') Số điện thoại
+                                    input#phone.form-control(type='text')
+                                .mb-2
+                                    label.form-label(for='address') Địa chỉ
+                                    input#address.form-control(type='text')
+                                .mb-2
+                                    label.form-label(for='province') Tỉnh/Thành Phố
+                                    select#province.form-select
+                                        option(selected='') Chọn tỉnh/thành phố
+                                        option(value='1') One
+                                        option(value='2') Two
+                                        option(value='3') Three
+                                .mb-2
+                                    label.form-label(for='district') Quận/Huyện
+                                    select#district.form-select
+                                        option(selected='') Chọn quận/huyện
+                                        option(value='1') One
+                                        option(value='2') Two
+                                        option(value='3') Three
+                                
+                                p.text-center.mt-4.mb-0
+                                    a.trans.d-inline-block(href='#')
+                                        img(src="./img/quay_thuong.png" alt="quay thưởng" width="160")
+
+
     .chatbot
         p.mb-0
             a.d-inline-block.trans(href="#")

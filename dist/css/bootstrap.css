@@ -3730,8 +3730,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-sm .navbar-nav .nav-link {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
   .navbar-expand-sm .navbar-nav-scroll {
     overflow: visible;
@@ -3783,8 +3783,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-md .navbar-nav .nav-link {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
   .navbar-expand-md .navbar-nav-scroll {
     overflow: visible;
@@ -3836,8 +3836,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
   .navbar-expand-lg .navbar-nav-scroll {
     overflow: visible;
@@ -3889,8 +3889,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-xl .navbar-nav .nav-link {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
   .navbar-expand-xl .navbar-nav-scroll {
     overflow: visible;
@@ -3942,8 +3942,8 @@ textarea.form-control-lg {
     position: absolute;
   }
   .navbar-expand-xxl .navbar-nav .nav-link {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
   .navbar-expand-xxl .navbar-nav-scroll {
     overflow: visible;
@@ -3994,8 +3994,8 @@ textarea.form-control-lg {
   position: absolute;
 }
 .navbar-expand .navbar-nav .nav-link {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
 }
 .navbar-expand .navbar-nav-scroll {
   overflow: visible;
@@ -8985,10 +8985,22 @@ textarea.form-control-lg {
 }
 @media (max-width: 991.98px) {
   .navbar-nav {
-    background-color: #eff6ff;
+    background-color: #A00101;
     border-radius: 6px;
     padding: 0 1rem;
     margin: 0.5rem 0 1rem;
+  }
+  .navbar-nav .nav-link {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar-nav .nav-link {
+    display: block;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
   }
 }
 @media (max-width: 767.98px) {
@@ -9026,6 +9038,11 @@ textarea.form-control-lg {
   }
   .navbar-nav .nav-link:after {
     height: 2px;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    font-size: 14px;
   }
 }
 
