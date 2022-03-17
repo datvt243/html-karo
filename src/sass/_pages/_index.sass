@@ -66,12 +66,22 @@
   +lg-down
     padding-top: 14rem
   .content
+    border-radius: 24px
+    
+    &.consolation
+      background: 
+        image: url(../img/consolation.png)
+        position: top center
+        size: contain
+        repeat: no-repeat
     +lg-up
       width: 570px
       transform: translateX(25%)
+      min-height: 480px
     +lg-down
       max-width: 420px
       width: auto
+      min-height: 300px
       
 .quay-thuong
   position: relative
@@ -155,5 +165,20 @@
   .form-control, .form-select
     height: 28px
     padding: 0.175rem 0.75rem
-    font-size: 13px
+    font:
+      size: 13px
+      weight: 700
     border-radius: 6px
+
+  .invalid-feedback
+    font:
+      size: 10px
+      weight: 700
+    color: #D22027
+    text-align: right
+
+  .text
+    font:
+      size: 14px
+      weight: 700
+    line-height: 1.25

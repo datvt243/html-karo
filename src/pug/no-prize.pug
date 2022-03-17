@@ -37,7 +37,7 @@ block container
     
     .section.vong-quay
         .container.d-flex.flex-column.justify-content-center.align-items-center.h-100
-            .content.bg-white.rounded.p-4.position-relative
+            .content.bg-white.rounded.p-4.position-relative.consolation
                 .row.h-100
                     .col-12.col-lg-6.my-2
                         .clearfix
@@ -45,39 +45,14 @@ block container
                                 p.m-0
                                     img(class="max-w-100" src="./img/vong_xoay.png", alt="quay thưởng" width="560")
                     .col-12.col-lg-6.my-2
-                        .form-primary
-                            p.title.mb-2 Vui lòng điền đầy đủ thông tin để được tham gia quay thưởng
-                            form
-                                .mb-2
-                                    label.form-label(for='code') Mã dự thưởng trên thẻ cào
-                                    input#code.form-control(type='text')
-                                .mb-2
-                                    label.form-label(for='fullname') Họ và tên
-                                    input#fullname.form-control(type='text')
-                                .mb-2
-                                    label.form-label(for='phone') Số điện thoại
-                                    input#phone.form-control(type='text')
-                                .mb-2
-                                    label.form-label(for='address') Địa chỉ
-                                    input#address.form-control(type='text')
-                                .mb-2
-                                    label.form-label(for='province') Tỉnh/Thành Phố
-                                    select#province.form-select
-                                        option(selected='') Chọn tỉnh/thành phố
-                                        option(value='1') One
-                                        option(value='2') Two
-                                        option(value='3') Three
-                                .mb-2
-                                    label.form-label(for='district') Quận/Huyện
-                                    select#district.form-select
-                                        option(selected='') Chọn quận/huyện
-                                        option(value='1') One
-                                        option(value='2') Two
-                                        option(value='3') Three
-                                
-                                p.text-center.mt-4.mb-0
-                                    a.trans.d-inline-block(href='#')
-                                        img(src="./img/quay_thuong.png" alt="quay thưởng" width="160")
+                        .form-primary.d-flex.flex-column.justify-content-center.h-100
+                            p.text-center.mb-3
+                                img(src="./img/chuc_ban_may_man_lan_sau.png" alt="Chúc bạn may mắn lần sau" width="")
+                            p.text-center.text.mb-3
+                                | Hãy tiếp tục đồng hành cùng Karo để có cơ hội trúng nhiều giải thưởng trong các chương trình khuyến mãi sắp diễn ra.
+                            p.text-center.mb-0
+                                a.trans.d-inline-block(href='#')
+                                    img(src="./img/da_hieu.png" alt="đã hiểu" width="160")
 
 
     .chatbot
