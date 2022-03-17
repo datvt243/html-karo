@@ -9030,11 +9030,16 @@ textarea.form-control-lg {
   opacity: 1;
   bottom: 0;
 }
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    text-align: center;
+  }
+}
 @media (max-width: 575.98px) {
   .navbar-nav .nav-link {
     text-align: center;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .navbar-nav .nav-link:after {
     height: 2px;
@@ -9043,6 +9048,20 @@ textarea.form-control-lg {
 @media (max-width: 991.98px) {
   .navbar-nav {
     font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+    padding-top: 150px;
+    display: block;
+  }
+  .navbar-nav .dropdown-menu {
+    transform: translateX(0);
+    max-width: 320px;
+    margin: auto;
   }
 }
 
