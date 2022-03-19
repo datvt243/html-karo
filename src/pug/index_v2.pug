@@ -1,0 +1,223 @@
+extends _layouts/default
+
+block vars
+    -title        = 'Karo | Trứng tươi - chà bông'
+    -description  = ''
+    -keywords     = ''
+    -pageID       = 'top'
+    -path         = '.'
+
+block style
+    link(rel="stylesheet" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css")
+    link(rel="stylesheet" href="https://unpkg.com/filepond/dist/filepond.min.css")
+
+block container
+    
+    .keyvisual
+        .container.d-flex.flex-column.justify-content-center.align-items-center.h-100
+            p.text-center
+                img(class="max-w-100" src="./img/trung_xe_o_to.png" alt="Trúng xe ô tô" width="757")
+            .mb-4 
+                .input_code
+                    .d-flex.align-items-center
+                        .column
+                            input.px-2(type="text" placeholder="Nhập mã dự thưởng" value="AXIS-XOAH-JLGFN-XMSL")
+                        .column.ps-2
+                            a.trans(href="#" data-bs-toggle="modal" data-bs-target="#my_modal") 
+                                img(class="max-w-100" src="./img/xac_nhan.png" alt="Xác nhận")
+            .clearfix
+                .content
+                    p.card-content
+                        img(class="max-w-100" src="./img/oto_02.png" alt="Trúng xe ô tô" width="757")
+                    .row.align-items-center.position-relative.z-index-10.pb-3
+                        .col
+                            p.deco01
+                                img(class="tren_10_ty_dong max-w-100" src="./img/tren_10_ty_dong.png" alt="Trên 10 tỷ đồng" width="273")
+                        .col
+                            p.deco02
+                                img(class="max-w-100" src="./img/deco_02.png" alt="Trên 10 tỷ đồng" width="380")
+                    
+        .footer.d-none.d-sm-block
+            .container
+                .row.align-items-center.justify-content-between
+                    .col-auto
+                        p.mb-0 Thời gian áp dụng từ 25/3/2022 - 25/5/2022 trên toàn quốc    
+                    .col-auto    
+                        p.mb-0 HOTLINE 19003389
+    
+    
+    #my_modal.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    .clearfix.w-100
+                        p.text-center.mb-1
+                            img.max-w-100(src="./img/chuc_mung_ban_da_nhan_duoc.png", alt="Chúc mừng bạn đã nhận được")
+                        p.text-center.mb-1
+                            img.max-w-100(src="./img/tyota.png", alt="tyota")
+                        p.text.text-center.mb-0
+                            | Vui lòng giữ lại thẻ cào và chụp lại màn hình trúng giải.
+                    //- button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    .content
+                        form.form-primary
+                            h3.title.black Thông tin nhận thưởng
+                            .w-260.mx-auto
+                                .mb-2
+                                    label.form-label(for='code') Họ và tên
+                                    input#code.form-control.form-control-md(type='text' value="Nguyễn Văn A")
+                                .mb-2
+                                    label.form-label(for='code') Ngày tháng năm sinh
+                                    input#code.form-control.form-control-md(type='date' value="")
+                                .mb-2
+                                    label.form-label(for='code') Giới tính
+                                    .row
+                                        .col
+                                            .form-control.form-control-md
+                                                .form-check
+                                                    input.form-check-input(type='radio' name='sex')
+                                                    label.form-check-label
+                                                        | Nam
+                                        .col
+                                            .form-control.form-control-md
+                                                .form-check
+                                                    input.form-check-input(type='radio' name='sex' checked='')
+                                                    label.form-check-label
+                                                        | Nữ
+                                .mb-2
+                                    label.form-label(for='province') Tỉnh/Thành Phố
+                                    select#province.form-select.form-control-md
+                                        option(selected='') Chọn tỉnh/thành phố
+                                        option(value='1') One
+                                        option(value='2') Two
+                                        option(value='3') Three
+                                .mb-2
+                                    label.form-label(for='district') Quận/Huyện
+                                    select#district.form-select.form-control-md
+                                        option(selected='') Chọn quận/huyện
+                                        option(value='1') One
+                                        option(value='2') Two
+                                        option(value='3') Three
+                                .mb-2
+                                    label.form-label(for='address') Địa chỉ
+                                    input#address.form-control.form-control-md(type='text')
+                                .mb-2
+                                    label.form-label(for='phone') Số điện thoại
+                                    input#address.form-control.form-control-md(type='text')
+                                .mb-2
+                                    label.form-label(for='email') Email
+                                    input#address.form-control.form-control-md(type='email' value="a.nguyen@gmail.com")
+                                .mb-2
+                                    label.form-label(for='code') Mã dự thưởng
+                                    input#address.form-control.form-control-md(type='text' value="AXIS-XOAH-JLGFN-XMSL" disabled)
+                                .mb-2
+                                    label.form-label(for='rank') Giải thưởng 
+                                    input#address.form-control.form-control-md(type='text' value="Giải đặc biệt - Toyota Vios" disabled)
+                                .mb-2
+                                    label.form-label(for='rank') Hình ảnh thẻ cào
+                                    .row
+                                        .col-12.col-md-6
+                                            input.mb-0(type="file" name="card_before" id="card_before" class="filepond" data-max-file-size="5MB" data-min-width="300" data-min-height="300" data-allowed-file-extensions="png jpeg jpg" required)
+                                        .col-12.col-md-6
+                                            input.mb-0(type="file" name="card_after" id="card_after" class="filepond" data-max-file-size="5MB" data-min-width="300" data-min-height="300" data-allowed-file-extensions="png jpeg jpg" required)
+                                .mb-2
+                                    label.form-label(for='rank') CMND/CCCD
+                                    .row
+                                        .col-12.col-md-6
+                                            input.mb-0(type="file" name="cccd_before" id="cccd_before" class="filepond" data-max-file-size="5MB" data-min-width="300" data-min-height="300" data-allowed-file-extensions="png jpeg jpg" required)
+                                        .col-12.col-md-6
+                                            input.mb-0(type="file" name="cccd_after" id="cccd_after" class="filepond" data-max-file-size="5MB" data-min-width="300" data-min-height="300" data-allowed-file-extensions="png jpeg jpg" required)
+                                .clearfix.mt-3
+                                    p.text-center.mb-0
+                                        a(href="#" data-bs-target="#modal_success" data-bs-toggle="modal")
+                                            img(src="./img/nhan_thuong.png", alt="nhận thưởng")
+                
+    #modal_success.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    .clearfix.w-100
+                        p.text-center.mb-1
+                            img(src="./img/chuc_mung_ban_da_nhan_duoc.png", alt="Chúc mừng bạn đã nhận được")
+                        p.text-center.mb-1
+                            img(src="./img/tyota.png", alt="tyota")
+                        p.text.text-center.mb-0
+                            | Vui lòng giữ lại thẻ cào và chụp lại màn hình trúng giải.
+                    //- button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    .content
+                        .form-primary
+                            .w-260.mx-auto
+                                p.text-center.text.big.text-bold.mb-3
+                                    | Cảm ơn bạn đã tham gia chương trình. 
+                                    br
+                                    | Giải thưởng sẽ được gởi đến bạn trong vòng 15 ngày làm việc. 
+                                p.text-center.mb-0
+                                    a.trans(href="#" data-bs-dismiss="modal")
+                                        img(src="./img/da_hieu.png", alt="đã hiểu")
+                .modal-footer
+                    .w-100
+                        p.text-center.text-danger.text-bold.mb-0 Thông báo: Còn 2 giải ô tô Toyota Vios
+
+    .chatbot
+        p.mb-0
+            a.d-inline-block.trans(href="#")
+                img(src="./img/chat.png" alt="Chat")
+
+block script
+    //- include FilePond library
+    script(src="https://unpkg.com/filepond/dist/filepond.min.js")
+    //- include FilePond plugins
+    script(src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js")
+    script(src="https://unpkg.com/jquery-filepond/filepond.jquery.js")
+    script(src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js")
+    script(src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js")
+
+    script.
+        FilePond.registerPlugin(
+            FilePondPluginFileEncode,
+            FilePondPluginFileValidateSize,
+            //FilePondPluginImageExifOrientation,
+            FilePondPluginImagePreview
+        );   
+        const fileponReviewHeight = 180;
+        const initlabelIdle = function(text) {
+            return `
+            <span class="d-block mb-0">
+                <span class="d-none d-xl-block text-center">
+                    <img src="./img/icon-upload.png" alt="" width="24" />
+                </span>
+                <span class="d-block text-center fnt-13 text-bold">${text}</span>
+            </span>
+            `;
+        }
+        
+        $(document).ready(function () {
+            const card_before = FilePond.create(document.querySelector("input#card_before"), {
+                labelIdle: initlabelIdle('Mặt trước'),
+                imagePreviewHeight: fileponReviewHeight,
+                imagePreviewHeight: 100,
+            });
+            const card_after = FilePond.create(document.querySelector("input#card_after"), {
+                labelIdle: initlabelIdle('Mặt sau'),
+                imagePreviewHeight: fileponReviewHeight,
+                imagePreviewHeight: 100,
+            });
+            const cccd_before = FilePond.create(document.querySelector("input#cccd_before"), {
+                labelIdle: initlabelIdle('Mặt trước'),
+                imagePreviewHeight: fileponReviewHeight,
+                imagePreviewHeight: 100,
+            });
+            const cccd_after = FilePond.create(document.querySelector("input#cccd_after"), {
+                labelIdle: initlabelIdle('Mặt sau'),
+                imagePreviewHeight: fileponReviewHeight,
+                imagePreviewHeight: 100,
+            });
+
+
+            console.log(card_before.name); 
+            console.log(card_before.maxFiles); 
+            console.log(card_before.required); 
+            console.log(card_before.allowMultiple); 
+
+        });

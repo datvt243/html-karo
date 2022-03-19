@@ -13,7 +13,7 @@ block container
             p.text-center
                 img(class="max-w-100" src="./img/trung_xe_o_to.png" alt="Trúng xe ô tô" width="757")
             p.text-center
-                a.d-inline-block.trans(href="#") 
+                a.d-inline-block.trans(href="#" data-bs-toggle="modal" data-bs-target="#my_modal") 
                     img(class="tham_gia_quay_thuong max-w-100" src="./img/tham_gia_quay_thuong.png" alt="Tham gia quay thưởng" width="320")
             .clearfix
                 .content
@@ -35,31 +35,34 @@ block container
                     .col-auto    
                         p.mb-0 HOTLINE 19003389
     
-    .section.vong-quay
-        .container.d-flex.flex-column.justify-content-center.align-items-center.h-100
-            .content.bg-white.rounded.p-4.position-relative.consolation
-                .row.h-100
-                    .col-12.col-lg-6.my-2
-                        .clearfix
-                            .quay-thuong
-                                p.m-0
-                                    img(class="max-w-100" src="./img/vong_xoay.png", alt="quay thưởng" width="560")
-                    .col-12.col-lg-6.my-2
-                        .form-primary.d-flex.flex-column.justify-content-center.h-100
-                            p.text-center.mb-2
-                                img(src="./img/chuc_mung_ban.png" alt="Chúc mừng bạn đã nhận được" width="182")
-                            p.text-center.mb-2
-                                img(src="./img/card_dien_thoai.png" alt="card điện thoại" width="132")
-                            p.text-center.mb-1
-                                img(src="./img/giai_khuyen_khich.png" alt="giải khuyến khích" width="164")
-                            p.text-center.mb-2
-                                img(src="./img/the_dien_thoai.png" alt="1 thẻ cào điện thoại")
-                            p.text-center.text.mb-2
-                                | Giải thưởng sẽ được chuyển đến tài khoản điện thoại của bạn trong vòng 24h. Vui lòng giữ lại thẻ cào và chụp lại màn hình trúng giải.
-                            p.text-center.mt-4.mb-0
-                                a.trans.d-inline-block(href='#')
-                                    img(src="./img/da_hieu.png" alt="đã hiểu" width="160")
-
+    #my_modal.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+        .modal-dialog.modal-xl.modal-fullscreen-xl-down.modal-dialog-centered
+            .modal-content.transparent
+                .modal-body
+                    .vong-quay
+                        .content.d-flex
+                            .d-flex.flex-cloumn.justify-content-center
+                                .row.h-100
+                                    .col-12.col-lg-6.my-2
+                                        .clearfix
+                                            .quay-thuong
+                                                p.m-0
+                                                    img(class="max-w-100" src="./img/vong_xoay.png", alt="quay thưởng" width="560")
+                                    .col-12.col-lg-6.my-2
+                                        .form-primary.d-flex.flex-column.justify-content-center.h-100
+                                            p.text-center.mb-2
+                                                img(src="./img/chuc_mung_ban.png" alt="Chúc mừng bạn đã nhận được" width="182")
+                                            p.text-center.mb-2
+                                                img(src="./img/card_dien_thoai.png" alt="card điện thoại" width="132")
+                                            p.text-center.mb-1
+                                                img(src="./img/giai_khuyen_khich.png" alt="giải khuyến khích" width="164")
+                                            p.text-center.mb-2
+                                                img(src="./img/the_dien_thoai.png" alt="1 thẻ cào điện thoại")
+                                            p.text-center.text.mb-2
+                                                | Giải thưởng sẽ được chuyển đến tài khoản điện thoại của bạn trong vòng 24h. Vui lòng giữ lại thẻ cào và chụp lại màn hình trúng giải.
+                                            p.text-center.mt-4.mb-0
+                                                a.trans.d-inline-block(href='#')
+                                                    img(src="./img/da_hieu.png" alt="đã hiểu" width="160")
 
     .chatbot
         p.mb-0

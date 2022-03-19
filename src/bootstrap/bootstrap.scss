@@ -83,7 +83,7 @@ $navbar-dark-color: #A00101;
 // @import "./bootstrap/list-group";
 // @import "./bootstrap/close";
 // @import "./bootstrap/toasts";
-// @import "./bootstrap/modal";
+@import "./bootstrap/modal";
 // @import "./bootstrap/tooltip";
 // @import "./bootstrap/popover";
 // @import "./bootstrap/carousel";
@@ -305,3 +305,14 @@ $custom_height: 1, 2, 3;
         background-color: #0a66c2;
     }
 }
+
+.modal {
+    &-content {
+        &.transparent {
+            background-color: transparent;
+            border: 0;
+        }
+    }
+}
+  
+  

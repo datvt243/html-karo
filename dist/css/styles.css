@@ -6,6 +6,13 @@
   opacity: 0.6;
 }
 
+.fnt-13 {
+  font-size: 13px !important;
+}
+.fnt-13.text-bold {
+  font-weight: 600 !important;
+}
+
 .header-container {
   position: absolute;
   z-index: 999;
@@ -126,9 +133,14 @@ ul.list-style-none {
   margin: 0;
 }
 
+.filepond--credits {
+  display: none;
+}
+
 .keyvisual {
   overflow: hidden;
   height: 100vh;
+  min-height: 800px;
   padding-top: 8rem;
   padding-bottom: 40px;
 }
@@ -206,11 +218,6 @@ ul.list-style-none {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-@media screen and (min-width: 992px) {
-  .vong-quay {
-    height: 100vh;
-  }
-}
 @media screen and (max-width: 992px) {
   .vong-quay {
     padding-top: 14rem;
@@ -218,6 +225,10 @@ ul.list-style-none {
 }
 .vong-quay .content {
   border-radius: 24px;
+  background-color: #fff;
+  padding: 20px 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .vong-quay .content.consolation {
   background-image: url(../img/consolation.png);
@@ -227,7 +238,7 @@ ul.list-style-none {
 }
 @media screen and (min-width: 992px) {
   .vong-quay .content {
-    width: 570px;
+    width: 560px;
     transform: translateX(25%);
     min-height: 480px;
   }
@@ -315,8 +326,12 @@ ul.list-style-none {
   font-size: 16px;
   font-weight: 700;
   color: #821F1F;
-  letter-spacing: 0.025em;
+  letter-spacing: 0;
   text-align: center;
+}
+.form-primary .title.black {
+  color: black;
+  font-size: 18px;
 }
 .form-primary .form-label {
   font-size: 13px;
@@ -332,6 +347,14 @@ ul.list-style-none {
   font-weight: 700;
   border-radius: 6px;
 }
+.form-primary .form-control .form-check, .form-primary .form-select .form-check {
+  position: relative;
+  top: 0.25em;
+}
+.form-primary .form-control-md, .form-primary .form-select-md {
+  height: 32px;
+  line-height: 1.5;
+}
 .form-primary .invalid-feedback {
   font-size: 10px;
   font-weight: 700;
@@ -342,6 +365,58 @@ ul.list-style-none {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.25;
+}
+.form-primary .text .big {
+  font-size: 20px;
+}
+.form-primary .w-260 {
+  width: 260px;
+}
+
+.input_code {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 24px;
+}
+.input_code input {
+  border: 0;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 2.6;
+  font-weight: 700;
+}
+.input_code input:focus-visible, .input_code input:focus {
+  border: 0;
+  outline: none;
+}
+
+.modal-prize .modal-content {
+  border-radius: 24px;
+  overflow: hidden;
+}
+.modal-prize .modal-header {
+  background: radial-gradient(51.19% 91% at 50.29% 42.26%, #D91C24 1.76%, #B50A0D 35.88%, #A00000 54.02%);
+  position: relative;
+}
+.modal-prize .modal-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/consolation.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.modal-prize .modal-header .text {
+  color: #fff;
+  opacity: 0.7;
+}
+.modal-prize .modal-footer {
+  background-color: #F4F3F3;
 }
 
 /*# sourceMappingURL=styles.css.map */
