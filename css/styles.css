@@ -196,7 +196,7 @@ ul.list-style-none {
   .keyvisual .footer {
     position: absolute;
     z-index: 10;
-    bottom: 0;
+    bottom: auto;
     left: 0;
   }
 }
@@ -217,6 +217,8 @@ ul.list-style-none {
   overflow: hidden;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media screen and (max-width: 992px) {
   .vong-quay {
@@ -229,6 +231,7 @@ ul.list-style-none {
   padding: 20px 40px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 .vong-quay .content.consolation {
   background-image: url(../img/consolation.png);
@@ -389,10 +392,14 @@ ul.list-style-none {
   border: 0;
   outline: none;
 }
+@media screen and (max-width: 768px) {
+  .input_code input {
+    font-size: 15px;
+  }
+}
 
 .modal-prize .modal-content {
   border-radius: 24px;
-  overflow: hidden;
 }
 .modal-prize .modal-header {
   background: radial-gradient(51.19% 91% at 50.29% 42.26%, #D91C24 1.76%, #B50A0D 35.88%, #A00000 54.02%);
