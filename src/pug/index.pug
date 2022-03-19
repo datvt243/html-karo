@@ -35,12 +35,14 @@ block container
                     .col-auto    
                         p.mb-0 HOTLINE 19003389
     
-    #my_modal.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    #my_modal.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true' data-bs-backdrop="static")
         .modal-dialog.modal-xl.modal-fullscreen-xl-down.modal-dialog-centered
             .modal-content.transparent
                 .modal-body
                     .vong-quay
                         .content
+                            a.modal-close(href="#" type='button' data-bs-dismiss='modal' aria-label='Close')
+                                img(src="./img/cancel.png", alt="cancel")
                             .row.h-100
                                 .col-12.col-lg-6.my-2
                                     .clearfix

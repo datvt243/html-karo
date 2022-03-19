@@ -54,6 +54,10 @@ $dropdown-min-width:                10rem;
 $dropdown-border-radius:            10px;
 $navbar-dark-color: #A00101;
 
+// Modal
+$modal-dialog-margin:               20px;
+$modal-content-border-radius: 24px;
+
 @import "./bootstrap/variables";
 @import "./bootstrap/mixins";
 @import "./bootstrap/utilities";
@@ -307,11 +311,26 @@ $custom_height: 1, 2, 3;
 }
 
 .modal {
+    &-close {
+        position: absolute;
+        z-index: 10;
+        top: -20px;
+        right: -20px;
+        background: #fff;
+        border-radius: 999px;
+        img {
+            width: 40px;
+        }
+    }
     &-content {
         &.transparent {
             background-color: transparent;
             border: 0;
         }
+    }
+    &-header {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
     }
 }
   

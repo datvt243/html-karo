@@ -35,12 +35,14 @@ block container
                     .col-auto    
                         p.mb-0 HOTLINE 19003389
     
-    #my_modal.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    #my_modal.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true' data-bs-backdrop="static")
         .modal-dialog.modal-xl.modal-fullscreen-xl-down.modal-dialog-centered
             .modal-content.transparent
                 .modal-body
                     .vong-quay
                         .content.d-flex
+                            a.modal-close(href="#" type='button' data-bs-dismiss='modal' aria-label='Close')
+                                img(src="./img/cancel.png", alt="cancel")
                             .d-flex.flex-cloumn.justify-content-center
                                 .row.h-100
                                     .col-12.col-lg-6.my-2
@@ -55,7 +57,7 @@ block container
                                             p.text-center.text.mb-3
                                                 | Hãy tiếp tục đồng hành cùng Karo để có cơ hội trúng nhiều giải thưởng trong các chương trình khuyến mãi sắp diễn ra.
                                             p.text-center.mb-0
-                                                a.trans.d-inline-block(href='#')
+                                                a.trans.d-inline-block(href='#' data-bs-dismiss='modal')
                                                     img(src="./img/da_hieu.png" alt="đã hiểu" width="160")
 
     .chatbot

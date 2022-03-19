@@ -46,10 +46,12 @@ block container
                         p.mb-0 HOTLINE 19003389
     
     
-    #my_modal.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    #my_modal.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true' data-bs-backdrop="static")
         .modal-dialog.modal-dialog-centered
             .modal-content
                 .modal-header
+                    a.modal-close(href="#" type='button' data-bs-dismiss='modal' aria-label='Close')
+                        img(src="./img/cancel.png", alt="cancel")
                     .clearfix.w-100
                         p.text-center.mb-1
                             img.max-w-100(src="./img/chuc_mung_ban_da_nhan_duoc.png", alt="Chúc mừng bạn đã nhận được")
@@ -116,31 +118,33 @@ block container
                                 .mb-2
                                     label.form-label(for='rank') Hình ảnh thẻ cào
                                     .row
-                                        .col-12.col-md-6
+                                        .col-6.col-md-6
                                             input.mb-0(type="file" name="card_before" id="card_before" class="filepond" data-max-file-size="5MB" data-min-width="300" data-min-height="300" data-allowed-file-extensions="png jpeg jpg" required)
-                                        .col-12.col-md-6
+                                        .col-6.col-md-6
                                             input.mb-0(type="file" name="card_after" id="card_after" class="filepond" data-max-file-size="5MB" data-min-width="300" data-min-height="300" data-allowed-file-extensions="png jpeg jpg" required)
                                 .mb-2
                                     label.form-label(for='rank') CMND/CCCD
                                     .row
-                                        .col-12.col-md-6
+                                        .col-6.col-md-6
                                             input.mb-0(type="file" name="cccd_before" id="cccd_before" class="filepond" data-max-file-size="5MB" data-min-width="300" data-min-height="300" data-allowed-file-extensions="png jpeg jpg" required)
-                                        .col-12.col-md-6
+                                        .col-6.col-md-6
                                             input.mb-0(type="file" name="cccd_after" id="cccd_after" class="filepond" data-max-file-size="5MB" data-min-width="300" data-min-height="300" data-allowed-file-extensions="png jpeg jpg" required)
                                 .clearfix.mt-3
                                     p.text-center.mb-0
                                         a(href="#" data-bs-target="#modal_success" data-bs-toggle="modal")
                                             img(src="./img/nhan_thuong.png", alt="nhận thưởng")
                 
-    #modal_success.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    #modal_success.modal.fade.modal-prize(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true' data-bs-backdrop="static")
         .modal-dialog.modal-dialog-centered
             .modal-content
                 .modal-header
+                    a.modal-close(href="#" type='button' data-bs-dismiss='modal' aria-label='Close')
+                        img(src="./img/cancel.png", alt="cancel")
                     .clearfix.w-100
                         p.text-center.mb-1
-                            img(src="./img/chuc_mung_ban_da_nhan_duoc.png", alt="Chúc mừng bạn đã nhận được")
+                            img.max-w-100(src="./img/chuc_mung_ban_da_nhan_duoc.png", alt="Chúc mừng bạn đã nhận được")
                         p.text-center.mb-1
-                            img(src="./img/tyota.png", alt="tyota")
+                            img.max-w-100(src="./img/tyota.png", alt="tyota")
                         p.text.text-center.mb-0
                             | Vui lòng giữ lại thẻ cào và chụp lại màn hình trúng giải.
                     //- button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
