@@ -18,9 +18,11 @@ header.header-container
             #navbarmenu.collapse.navbar-collapse
                 ul.navbar-nav
                     li.nav-item
-                        a.nav-link.trans(href="#") trang chủ
+                        a.nav-link.trans(href="#")
+                            | trang chủ
                     li.nav-item
-                        a.nav-link.trans(href="#") thể lệ
+                        a.nav-link.trans(href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modal_rules")
+                            | thể lệ
                     li.nav-item
                         .dropdown
                             a.nav-link.trans#shopOnline(data-bs-toggle='dropdown' aria-expanded='false')
@@ -29,37 +31,15 @@ header.header-container
                                     img(src="./img/icon/arrow-down.png" alt="icon")
                             .dropdown-menu.dropdown-menu-end(aria-labelledby='shopOnline')
                                 ul.row.list-style-none
-                                    li.col-6.col-lg-12.py-1
-                                        a.dropdown-item(href='#')
-                                            span.d-flex.align-items-center
-                                                span.ico
-                                                    img(src="./img/icon/zalo.png" alt="Zalo")
-                                                span.text.ps-2 Zalo
-                                    li.col-6.col-lg-12.py-1
-                                        a.dropdown-item(href='#')
-                                            span.d-flex.align-items-center
-                                                span.ico
-                                                    img(src="./img/icon/shopee.png" alt="Shopee")
-                                                span.text.ps-2 Shopee
-                                    li.col-6.col-lg-12.py-1
-                                        a.dropdown-item(href='#')
-                                            span.d-flex.align-items-center
-                                                span.ico
-                                                    img(src="./img/icon/tiki.png" alt="Tiki")
-                                                span.text.ps-2 Tiki
-                                    li.col-6.col-lg-12.py-1
-                                        a.dropdown-item(href='#')
-                                            span.d-flex.align-items-center
-                                                span.ico
-                                                    img(src="./img/icon/lazada.png" alt="Lazada")
-                                                span.text.ps-2 Lazada
-                                    li.col-6.col-lg-12.py-1
-                                        a.dropdown-item(href='#')
-                                            span.d-flex.align-items-center
-                                                span.ico
-                                                    img(src="./img/icon/richy.png" alt="Ricky")
-                                                span.text.ps-2 Ricky
-
+                                    -
+                                        var list_menu = ['zalo', 'shopee', 'tiki', 'lazada', 'richy']
+                                    each menu in list_menu
+                                        li.col-6.col-lg-12.py-1
+                                            a.dropdown-item(href='#')
+                                                span.d-flex.align-items-center
+                                                    span.ico
+                                                        img(src="./img/icon/"+menu+".png" alt=menu)
+                                                    span.text.text-capitalize.ps-2= menu
                     li.nav-item.d-none.d-lg-block
                         span.nav-link
                             span.nav-tel.d-flex.align-items-center

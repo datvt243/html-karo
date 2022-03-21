@@ -13,6 +13,10 @@
   font-weight: 600 !important;
 }
 
+.fnt-14 {
+  font-size: 14px !important;
+}
+
 .header-container {
   position: absolute;
   z-index: 999;
@@ -135,6 +139,22 @@ ul.list-style-none {
 
 .filepond--credits {
   display: none;
+}
+
+.rules-content > .list > li {
+  margin-bottom: 0.5rem;
+}
+.rules-content .list.margin-bottom > li {
+  margin-bottom: 0.5rem;
+}
+.rules-content ol li > *:not(:last-child), .rules-content ul li > *:not(:last-child), .rules-content .list li > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.rules-content ol li > *:last-child, .rules-content ul li > *:last-child, .rules-content .list li > *:last-child {
+  margin-bottom: 0;
+}
+.rules-content .table {
+  min-width: 650px;
 }
 
 .keyvisual {
@@ -424,6 +444,19 @@ ul.list-style-none {
 }
 .modal-prize .modal-footer {
   background-color: #F4F3F3;
+}
+
+.modal-rules .modal-content {
+  border: 5px solid #A00000;
+  background-color: #A00000;
+}
+.modal-rules .modal-header, .modal-rules .modal-footer {
+  background: radial-gradient(51.19% 91% at 50.29% 42.26%, #D91C24 1.76%, #B50A0D 35.88%, #A00000 54.02%);
+  position: relative;
+  color: #fff;
+}
+.modal-rules .modal-body {
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

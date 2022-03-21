@@ -12,6 +12,8 @@
   font-size: 13px !important
   &.text-bold
     font-weight: 600 !important
+.fnt-14
+  font-size: 14px !important
 
 @import '_parts/_header'
 @import '_parts/_footer'
@@ -43,5 +45,20 @@ ul.list-style-none
 .filepond--credits 
   display: none
 
+.rules-content
+  > .list
+    > li
+      margin-bottom: .5rem
+  .list.margin-bottom
+    > li
+      margin-bottom: .5rem
+  ol, ul, .list
+    li
+      > *:not(:last-child)
+        margin-bottom: .5rem
+      > *:last-child
+        margin-bottom: 0
+  .table
+    min-width: 650px
 
 @import '_pages/_index'
