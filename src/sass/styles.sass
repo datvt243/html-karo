@@ -45,20 +45,51 @@ ul.list-style-none
 .filepond--credits 
   display: none
 
-.rules-content
-  > .list
-    > li
-      margin-bottom: .5rem
-  .list.margin-bottom
-    > li
-      margin-bottom: .5rem
-  ol, ul, .list
-    li
-      > *:not(:last-child)
+.rules
+  
+  &-title
+    font:
+      size: 2.2rem
+      weight: 700
+    +md-down
+      font-size: 1.6rem
+    +sm-down
+      font-size: 1.2rem
+
+  &-container
+    background-color: white
+    overflow: hidden
+    border-radius: 24px
+    border: 2px solid #fff
+
+  &-header, &-content, &-fooer
+    padding: 2rem
+    +sm-down
+      padding: 1.5rem
+
+  &-header
+    background: radial-gradient(51.19% 91% at 50.29% 42.26%, #D91C24 1.76%, #B50A0D 35.88%, #A00000 54.02%)
+    position: relative
+    color: #fff
+    border-bottom: 1px solid #A00000
+
+  &-content
+    > .list
+      > li
         margin-bottom: .5rem
-      > *:last-child
-        margin-bottom: 0
-  .table
-    min-width: 650px
+    .list.margin-bottom
+      > li
+        margin-bottom: .5rem
+    ol, ul, .list
+      li
+        > *:not(:last-child)
+          margin-bottom: .5rem
+        > *:last-child
+          margin-bottom: 0
+    .table
+      min-width: 650px
+
+    .text-bold, a
+      color: #A00000
 
 @import '_pages/_index'
