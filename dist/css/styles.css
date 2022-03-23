@@ -181,6 +181,9 @@ ul.list-style-none {
 .rules-content .list.margin-bottom > li {
   margin-bottom: 0.5rem;
 }
+.rules-content ol li, .rules-content ul li, .rules-content .list li {
+  margin-bottom: 0.5rem;
+}
 .rules-content ol li > *:not(:last-child), .rules-content ul li > *:not(:last-child), .rules-content .list li > *:not(:last-child) {
   margin-bottom: 0.5rem;
 }
